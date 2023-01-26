@@ -1,28 +1,34 @@
-## Getting Started
+# DiamondScores
 
-Create a project using this example:
+A simple smart contract to store player scores and nicknames on the Ethereum blockchain.
 
-```bash
-npx thirdweb create --contract --template hardhat-javascript-starter
-```
+## Features
+- Players can add nicknames to their Ethereum address
+- Players can add encrypted scores to their Ethereum address
+- Players can view all scores and nicknames on the contract
+- Events are emitted for added nicknames and scores
 
-You can start editing the page by modifying `contracts/Contract.sol`.
+## Usage
+1. Add a nickname to your Ethereum address by calling the `addNickname` function and passing in a string for your desired nickname. 
+2. Add an encrypted score to your Ethereum address by calling the `addScore` function and passing in a string for your encrypted score. 
+3. View all scores and nicknames on the contract by calling the `getAllScores` and `getNickname` functions respectively.
 
-To add functionality to your contracts, you can use the `@thirdweb-dev/contracts` package which provides base contracts and extensions to inherit. The package is already installed with this project. Head to our [Contracts Extensions Docs](https://portal.thirdweb.com/contractkit) to learn more.
+## Note
+
+- The smart contract is written in Solidity version 0.8.9 and therefore compatible with any environment that support solidity version 0.8.9 or above.
+
+## Contribution
+- Contributions are welcome! Please feel free to submit pull requests with any improvements or bug fixes.
+- Please open an issue if you encounter any problems or have any suggestions for the project.
 
 ## Building the project
 
-After any changes to the contract, run:
+Run:
 
 ```bash
 npm run build
 # or
 yarn build
-```
-
-to compile your contracts. This will also detect the [Contracts Extensions Docs](https://portal.thirdweb.com/contractkit) detected on your contract.
-
-## Deploying Contracts
 
 When you're ready to deploy your contracts, just run one of the following command to deploy you're contracts:
 
@@ -40,8 +46,3 @@ If you want to release a version of your contracts publicly, you can use one of 
 npm run release
 # or
 yarn release
-```
-
-## Join our Discord!
-
-For any questions, suggestions, join our discord at [https://discord.gg/thirdweb](https://discord.gg/thirdweb).
