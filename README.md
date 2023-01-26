@@ -1,4 +1,4 @@
-# DiamondScores
+# DiamondHands Score Smart Contract
 
 A simple smart contract to store player scores and nicknames on the Ethereum blockchain.
 
