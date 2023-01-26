@@ -3,15 +3,21 @@
 A simple smart contract to store player scores and nicknames on the Ethereum blockchain.
 
 ## Features
-- Players can add nicknames to their Ethereum address
-- Players can add encrypted scores to their Ethereum address
-- Players can view all scores and nicknames on the contract
-- Events are emitted for added nicknames and scores
+- Players can add their own nicknames
+- Players can add their own encrypted scores
+- Players can retrieve their own encrypted scores
+- Players can retrieve other players' nicknames
 
-## Usage
-1. Add a nickname to your Ethereum address by calling the `addNickname` function and passing in a string for your desired nickname. 
-2. Add an encrypted score to your Ethereum address by calling the `addScore` function and passing in a string for your encrypted score. 
-3. View all scores and nicknames on the contract by calling the `getAllScores` and `getNickname` functions respectively.
+## Contract Methods
+- addNickname(string _nickname): Allows a player to add a nickname for themselves. The nickname must be between 3 and 30 characters in length.
+- addScore(string _encryptedScore): Allows a player to add an encrypted score for themselves.
+- getAllScores(): Returns an array of all scores that have been added to the contract.
+- getNickname(address _player): Returns the nickname of a given player.
+- getScore(address _player): Returns the encrypted score of a given player.
+
+## Events
+- NicknameAdded(address player, string nickname): Triggered when a player adds a nickname for themselves.
+- ScoreAdded(address player, string encryptedScore, string nickname): Triggered when a player adds an encrypted score for themselves.
 
 ## Note
 
